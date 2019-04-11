@@ -99,3 +99,13 @@ int scan_errors(Circle *c, char *str, int index, int count_err)
 	return 0;
 }
 
+void print_circle(Circle *c, int size)
+{	
+	for (int i = 1; i < size; i++) {
+		printf("%d. circle(%f %f, %f)\n", (c + i)->index, (c + i)->x, (c + i)->y, (c + i)->r);
+		printf("\tperimeter = %f\n", get_perimeter(c, i));
+		printf("\tarea = %f\n", get_area(c, i));
+		printf("\tintersects: \n");	
+		get_intersect(c, size, i);
+	}
+}
