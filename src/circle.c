@@ -118,5 +118,19 @@ double get_perimeter(Circle *c, int i)
 double get_area(Circle *c, int i)
 {
 	return (c + i) ->r * (c + i)->r * M_PI;
+}
+
+void get_intersect(Circle *c, int size, int index)
+{	
+	double dis;
+	for (int i = 1; i < size; i++) {
+		if (i == index) {
+			continue;
+		}
+		dis = sqrt((double)pow((c + index)->x - (c + i)->x, 2.00) + (double)pow((c + index)->y - (c + i)->y, 2.00));
+		if (dis < (c + index)->r + (c + i)->r && (c + index)->r < dis + (c + i)->r && (c + i)->r < dis + (c + index)->r) {
+			printf("\t\t%d. circle\n", (c+i)->index);
+		}
+	}
 }	
 
