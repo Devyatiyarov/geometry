@@ -114,3 +114,9 @@ double get_perimeter(Circle *c, int i)
 {
 	return (c + i)->r * 2 * M_PI;
 }	
+
+double get_area(Circle *c, int i)
+{
+	return (c + i) ->r * (c + i)->r * M_PI;
+}	
+
