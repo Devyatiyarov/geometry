@@ -109,3 +109,8 @@ void print_circle(Circle *c, int size)
 		get_intersect(c, size, i);
 	}
 }
+
+double get_perimeter(Circle *c, int i)
+{
+	return (c + i)->r * 2 * M_PI;
+}	
