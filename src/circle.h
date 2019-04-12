@@ -7,7 +7,7 @@ typedef struct {
 	int index;
 } Circle;
 
-void get_intersect(Circle *c, int size, int index);
+//void get_intersect(Circle *c, int size, int index);
 double get_perimeter(Circle *c, int i);
 double get_area(Circle *c, int i);
 void print_circle(Circle *c, int i);
