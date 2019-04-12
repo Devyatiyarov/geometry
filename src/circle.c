@@ -90,6 +90,8 @@ int scan_errors(Circle* c, char* str, int index, int count_err)
         printf("Radius can`t be <= 0\n");
         return -1;
     }
+    
+    
     if (str[i] != ')') {
         printf("String %d\n\t error: ", index + count_err);
         printf("Missing Bracket\n");
