@@ -49,7 +49,7 @@ int scan_errors(Circle *c, char *str, int index, int count_err)
 		printf(">%c\n", str[i]);
 		return -1;
 	}
-	
+
 	for (int j = 0; str[i] != ','; i++, j++) {
 		if ((str[i] < '0' || str[i] > '9') && str[i] != '.' && str[i] != '-') {
 			printf("String %d\n\t error: ", index + count_err );
@@ -100,28 +100,28 @@ int scan_errors(Circle *c, char *str, int index, int count_err)
 }
 
 void print_circle(Circle *c, int size)
-{	
+{
 	for (int i = 1; i < size; i++) {
 		printf("%d. circle(%f %f, %f)\n", (c + i)->index, (c + i)->x, (c + i)->y, (c + i)->r);
 		printf("\tperimeter = %f\n", get_perimeter(c, i));
 		printf("\tarea = %f\n", get_area(c, i));
-		printf("\tintersects: \n");	
-		get_intersect(c, size, i);
+		//printf("\tintersects: \n");	
+		//get_intersect(c, size, i);
 	}
 }
 
 double get_perimeter(Circle *c, int i)
 {
 	return (c + i)->r * 2 * M_PI;
-}	
+}
 
 double get_area(Circle *c, int i)
 {
 	return (c + i) ->r * (c + i)->r * M_PI;
 }
 
-void get_intersect(Circle *c, int size, int index)
-{	
+/*void get_intersect(Circle *c, int size, int index)
+{
 	double dis;
 	for (int i = 1; i < size; i++) {
 		if (i == index) {
@@ -132,5 +132,5 @@ void get_intersect(Circle *c, int size, int index)
 			printf("\t\t%d. circle\n", (c+i)->index);
 		}
 	}
-}	
+}*/
 
